@@ -526,7 +526,7 @@ Particle.prototype = (function(o) {
         
         bufferCtx.strokeStyle = particleColor;
         bufferCtx.lineCap = bufferCtx.lineJoin = "round";
-        bufferCtx.lineWidth = PARTICLE_RADIUS * 5;
+        bufferCtx.lineWidth = PARTICLE_RADIUS * 2;
         bufferCtx.beginPath();
 
         for (i = 0; i < len; i++) {
