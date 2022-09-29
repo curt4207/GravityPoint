@@ -1,13 +1,17 @@
 <!-- Curtis Clayton version of Gravity Points Reference: [https://code.tutsplus.com/articles/21-ridiculously-impressive-html5-canvas-experiments] Thanks to Original Author CodePen
 Gravity Points:
 Akimitsu Hamamuro -->
-<head></head>
-<link rel="stylesheet" href="style.css"/>
-<canvas id="canvas"></canvas>
-<div class="info"> Click on screen to add Gravity Points</div>
+<head>
+  <script type="text/javascript" src="dat.gui.min.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div class="info"> Click on screen, double Click, grab and throw adjust controls for fun </div>
 
+  <script src="GravityPoint.js"></script>
 
-<script>
+  <script>
     document.write(
       '<script src="http://' +
         (location.host || '${1:localhost}').split(':')[0] +
@@ -15,3 +19,4 @@ Akimitsu Hamamuro -->
         'script>'
     );
   </script>
+</body>
