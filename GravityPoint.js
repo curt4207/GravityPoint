@@ -262,8 +262,15 @@ GravityPoint.prototype = (function(o) {
         
         if (this.x > screenWidth) {
             this.x = 0;
-        } else if ( this.x < 0) {
+        } 
+        else if (this.x < 0) {
             this.x = screenWidth;
+        } 
+        if (this.y > screenHeight){
+            this.y = 0;
+        } 
+        else if (this.y < 0){
+            this.y = screenHeight;
         }
 
         this._draw(ctx);
