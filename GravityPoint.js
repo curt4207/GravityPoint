@@ -7,16 +7,16 @@ window.requestAnimationFrame = (function() {
     }
 })();
 
-// let color = ["#49fb35"];
+// let color = ["#FBFFFF"];
 
- let color = ["#F2BDF2","#49fb35", "#02CADB", "#F005F5", "#F2BDF2", "#0000FF", "#FF0CD0", "#FF5B19", "#75FF44"]; 
+ let color = ["#F2BDF2","#49fb35", "#02CADB", "#F005F5", "#F2BDF2", "#0000FF", "#FF0CD0", "#FF5B19", "#75FF44", "#000000"]; 
 
 function randomColor () {
-    return color[Math.floor(Math.random() * color.length)];
-    
+    return color[Math.floor(Math.random() * color.length)];   
 }
 
 let particleColor = randomColor();
+
 // Vector
 
 function Vector (x, y) {
@@ -282,10 +282,10 @@ GravityPoint.prototype = (function(o) {
         ctx.save();
 
         grd = ctx.createRadialGradient(this.x, this.y, this.radius, this.x, this.y, this.radius * 5);
-        grd.addColorStop(0, "rgba(0, 0, 0, 0.1)");
+        grd.addColorStop(0, "rgba(0, 0, 0, 0.09)");
         grd.addColorStop(1, "rgba(0, 0, 0, 0)");
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius *5, 0, Math.PI * 2, false);
+        ctx.arc(this.x, this.y, this.radius * 5, 0, Math.PI * 2, false);
         ctx.fillStyle = grd;
         ctx.fill();
 
@@ -483,7 +483,7 @@ Particle.prototype = (function(o) {
         if (control.randomColor) {
             particleColor = randomColor();
         } else {
-            particleColor = "#fff";
+            particleColor = "#FBFFFF";
         }
 
     });
@@ -522,7 +522,7 @@ Particle.prototype = (function(o) {
         len = particles.length;
         
         bufferCtx.save();
-        bufferCtx.fillStyle = "white";
+        bufferCtx.fillStyle = "#FBFFFF";
         
         bufferCtx.strokeStyle = particleColor;
         bufferCtx.lineCap = bufferCtx.lineJoin = "round";
